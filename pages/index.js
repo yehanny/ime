@@ -1,10 +1,9 @@
 import Head from "next/head";
-import { useEffect } from "react";
 import CustomComponents from "../components/custom/Custom-components";
 import HeaderComponent from "../components/custom/sections/headercomponent";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Portfolio from "../components/portfolio/Portfolio";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import HomeSlider from "../components/slider/HomeSlider";
 import ClientSlider from "../components/slider/ClientSlider";
 

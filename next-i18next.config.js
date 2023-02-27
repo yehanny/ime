@@ -7,5 +7,5 @@ module.exports = {
   trailingSlash: true,
   nonExplicitSupportedLngs: true,
   reloadOnPrerender: process.env.NODE_ENV === "development",
-  debug: true,
+  debug: false,
 };

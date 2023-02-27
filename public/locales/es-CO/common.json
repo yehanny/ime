@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about-us": "Nosotros",
+    "portfolio": "Portafolio",
+    "contact-us": "Contactos"
+  },
+  "home": {
+    "title": "Inicio"
+  },
+  "about-us": {
+    "title": "Nosotros",
+    "description": "Somos una empresa con mas de 25 años de trayectoria conformada por un equipo de creativos dedicados a diseñar , fabricar y crear experiencias innovadoras a traves de nuestro trabajo. \n Nos encargamos de realizar tematizaciones, escenarios , escenografias y diseño de espacios interiores y exteriores. Además de desarrollar efectos especiales, trabajos de electrónica y proyecciones con las mejores tecnologías de sonido e iluminación. También fabricamos todo tipo de atracciones, simuladores, animatrónicas y carrozas temáticas. \n Somos capaces de diseñar y desarrollar cualquier idea, llegando a prestar servicio a grandes marcas, centros comerciales, empresas de entretenimiento, parques temáticos, estudios de televisión y restaurantes, siendo parte del éxito de diferentes compañías en latinoamérica y Estados Unidos."
+  },
+  "portfolio": {
+    "title": "Portafolio"
+  },
+  "clients": {
+    "title": "Clientes",
+    "subtitle": "Hemos trabajados con éstas marcas en nuestros proyectos",
+    "description": "Hemos trabajados con éstas marcas en nuestros proyectos"
+  },
+  "contact-us": "Contactos"
+}

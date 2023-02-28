@@ -1,0 +1,14 @@
+{
+  "/_error": "pages/_error.js",
+  "/api/hello": "pages/api/hello.js",
+  "/_app": "pages/_app.js",
+  "/": "pages/index.js",
+  "/about-us": "pages/about-us.js",
+  "/portfolio": "pages/portfolio.js",
+  "/contact-us": "pages/contact-us.js",
+  "/_document": "pages/_document.js",
+  "/en-US/500": "pages/en-US/500.html",
+  "/es-CO/500": "pages/es-CO/500.html",
+  "/en-US/404": "pages/en-US/404.html",
+  "/es-CO/404": "pages/es-CO/404.html"
+}

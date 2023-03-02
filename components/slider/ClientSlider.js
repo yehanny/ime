@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Row, Col, Container } from "reactstrap";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
-import client1 from "../../assets/images/client-slider/adidas.png";
+import clientimages from "./clientimages";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,48 +17,9 @@ const ClientSlider = () => {
   const { t } = useTranslation("common");
   const title = t("clients.title");
   const subtitle = t("clients.subtitle");
-  const sliders = [
-    {
-      id: 1,
-      image: client1,
-    },
-    {
-      id: 2,
-      image: client1,
-    },
-    {
-      id: 3,
-      image: client1,
-    },
-    {
-      id: 4,
-      image: client1,
-    },
-    {
-      id: 5,
-      image: client1,
-    },
-    {
-      id: 6,
-      image: client1,
-    },
-    {
-      id: 7,
-      image: client1,
-    },
-    {
-      id: 8,
-      image: client1,
-    },
-    {
-      id: 9,
-      image: client1,
-    },
-    {
-      id: 10,
-      image: client1,
-    },
-  ];
+
+  console.info("clients: ", clientimages);
+
   return (
     <>
       <div className="spacer">
@@ -67,10 +28,12 @@ const ClientSlider = () => {
             <Col md="12" className="text-center">
               <h2 className="title">{title}</h2>
               <h6 className="subtitle">{subtitle}</h6>
-              <Swiper id="clients" modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCreative]} spaceBetween={50} slidesPerView={8} speed={1000} navigation={true} pagination={{ clickable: true, dynamicBullets: true }} autoplay={true}>
-                {sliders.map((slider) => (
-                  <SwiperSlide key={slider.id}>
-                    <Image src={slider.image} layout="responsive" alt={`Client ${slider.id}`} />
+              <Swiper id="clients" modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCreative]} spaceBetween={100} slidesPerView={6} speed={1000} navigation={true} pagination={{ clickable: true, dynamicBullets: true }} autoplay={true}>
+                {clientimages.map((slider, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="position-relative">
+                      <Image src={slider.src} fixed width={200} height={200} alt={`Client ${index}`} />
+                    </div>
                   </SwiperSlide>
                 ))}
               </Swiper>

@@ -1,0 +1,34 @@
+import client1 from "../../assets/images/client-slider/alcaldia-de-maracaibo.jpg";
+import client2 from "../../assets/images/client-slider/american-airlines.jpg";
+import client3 from "../../assets/images/client-slider/american-express.jpg";
+import client4 from "../../assets/images/client-slider/arturos.jpg";
+import client5 from "../../assets/images/client-slider/aserca-airlines.jpg";
+import client6 from "../../assets/images/client-slider/bacardi.jpg";
+import client7 from "../../assets/images/client-slider/banco-de-chile.jpg";
+import client8 from "../../assets/images/client-slider/banco-do-brasil.jpg";
+import client9 from "../../assets/images/client-slider/banesco.jpg";
+import client10 from "../../assets/images/client-slider/bcr.jpg";
+import client11 from "../../assets/images/client-slider/bimbo.jpg";
+import client12 from "../../assets/images/client-slider/bod.jpg";
+import client13 from "../../assets/images/client-slider/cafe-bustello.jpg";
+import client14 from "../../assets/images/client-slider/caprisun.jpg";
+import client15 from "../../assets/images/client-slider/carnival.jpg";
+import client16 from "../../assets/images/client-slider/cerveza-regional.jpg";
+import client17 from "../../assets/images/client-slider/chinita.jpg";
+import client18 from "../../assets/images/client-slider/cinema-restaurant.jpg";
+import client19 from "../../assets/images/client-slider/coca-cola.jpg";
+import client20 from "../../assets/images/client-slider/colgate.jpg";
+import client21 from "../../assets/images/client-slider/corona.jpg";
+import client22 from "../../assets/images/client-slider/dell.jpg";
+import client23 from "../../assets/images/client-slider/delmonte.jpg";
+import client24 from "../../assets/images/client-slider/disney-ice.jpg";
+import client25 from "../../assets/images/client-slider/exito.jpg";
+import client26 from "../../assets/images/client-slider/franca.jpg";
+import client27 from "../../assets/images/client-slider/hesperia.jpg";
+import client28 from "../../assets/images/client-slider/hotel-kristof.jpg";
+import client29 from "../../assets/images/client-slider/mercantil.jpg";
+import client30 from "../../assets/images/client-slider/panorama.jpg";
+
+const clientimages = [client1, client2, client3, client4, client5, client6, client7, client8, client9, client10, client11, client12, client13, client14, client15, client16, client17, client18, client19, client20, client21, client22, client23, client24, client25, client26, client27, client28, client29, client30];
+
+export default clientimages;

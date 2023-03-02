@@ -50,10 +50,8 @@ const NavBar = () => {
                   </DropdownMenu>
                 </UncontrolledDropdown> */}
               </Nav>
-              <Link href="/contact-us">
-                <a className="btn btn-outline-info" href="#">
-                  {t("nav.contact-us")}
-                </a>
+              <Link legacyBehavior href="/contact-us" className="btn btn-outline-info">
+                {t("nav.contact-us")}
               </Link>
             </Collapse>
           </Navbar>

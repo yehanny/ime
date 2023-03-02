@@ -17,13 +17,13 @@ const Footer = (props) => {
           <Block title={t("footer.block2-title")}>
             <p>
               <i className="fa fa-envelope"></i>&nbsp;&nbsp;
-              <Link href="#">
-                <a className="link">{t("footer.email-value")}</a>
+              <Link legacyBehavior href="#" className="link">
+                {t("footer.email-value")}
               </Link>
               <br />
               <i className="fa fa-globe"></i>&nbsp;&nbsp;
-              <Link href="https://industrialmagicentertainment.com">
-                <a className="link">industrialmagicentertainment.com</a>
+              <Link legacyBehavior href="https://industrialmagicentertainment.com" className="link">
+                industrialmagicentertainment.com
               </Link>
               <br />
               <i className="fa fa-phone"></i>&nbsp;&nbsp; +207 235 7890
@@ -31,20 +31,14 @@ const Footer = (props) => {
           </Block>
           <Block title={t("footer.block3-title")}>
             <div className="round-social light">
-              <Link href="#">
-                <a className="link">
-                  <i className="fa fa-facebook"></i>
-                </a>
+              <Link legacyBehavior href="#" className="link">
+                <i className="fa fa-facebook"></i>
               </Link>
-              <Link href="#">
-                <a className="link">
-                  <i className="fa fa-twitter"></i>
-                </a>
+              <Link legacyBehavior href="#" className="link">
+                <i className="fa fa-twitter"></i>
               </Link>
-              <Link href="#">
-                <a className="link">
-                  <i className="fa fa-instagram"></i>
-                </a>
+              <Link legacyBehavior href="#" className="link">
+                <i className="fa fa-instagram"></i>
               </Link>
             </div>
           </Block>
@@ -55,19 +49,19 @@ const Footer = (props) => {
               <div className="d-flex font-14 justify-content-between">
                 <div className="m-t-10 m-b-10 copyright">
                   {t("footer.rights")}{" "}
-                  <Link href="https://industrialmagicentertainment.com">
-                    <a className="link">industrialmagicentertainment.com</a>
+                  <Link legacyBehavior href="https://industrialmagicentertainment.com" className="link">
+                    industrialmagicentertainment.com
                   </Link>
                 </div>
                 <div className="links ml-auto m-t-10 m-b-10">
-                  <Link href="#">
-                    <a className="p-10 p-l-0">{t("footer.terms-of-use")}</a>
+                  <Link legacyBehavior href="#" className="p-10 p-l-0">
+                    {t("footer.terms-of-use")}
                   </Link>
-                  <Link href="#">
-                    <a className="p-10">{t("footer.legal-disclaimer")}</a>
+                  <Link legacyBehavior href="#" className="p-10">
+                    {t("footer.legal-disclaimer")}
                   </Link>
-                  <Link href="#">
-                    <a className="p-10">{t("footer.privacy-policy")}</a>
+                  <Link legacyBehavior href="#" className="p-10">
+                    {t("footer.privacy-policy")}
                   </Link>
                 </div>
               </div>

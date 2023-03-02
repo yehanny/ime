@@ -56,7 +56,7 @@ const ContactComponent = () => {
               </Col>
               <Col lg="4">
                 <div className="detail-box p-40 bg-info">
-                  <Image src={office1} alt="Contact Us" />
+                  <Image width={340} src={office1} alt="Contact Us" />
                 </div>
               </Col>
             </Row>

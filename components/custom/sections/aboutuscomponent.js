@@ -17,7 +17,7 @@ const AboutUs = () => {
         <Container>
           <Row className="justify-content-center">
             <Col md="4">
-              <Image src={office1} alt="Who we are" />
+              <Image width={400} src={office1} alt="Who we are" />
             </Col>
             <Col md="8" className="text-justify">
               <h2 className="title">{t("about-us.who-we-are.title")}</h2>
@@ -32,12 +32,12 @@ const AboutUs = () => {
               <p>{t("about-us.mission.description")}</p>
             </Col>
             <Col md="4">
-              <Image src={office2} alt="Mission" />
+              <Image width={400} src={office2} alt="Mission" />
             </Col>
           </Row>
           <Row>
             <Col md="4">
-              <Image src={office3} alt="Vision" />
+              <Image width={400} src={office3} alt="Vision" />
             </Col>
             <Col md="8">
               <h2 className="title">{t("about-us.vision.title")}</h2>

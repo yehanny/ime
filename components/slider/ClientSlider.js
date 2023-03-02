@@ -32,7 +32,7 @@ const ClientSlider = () => {
                 {clientimages.map((slider, index) => (
                   <SwiperSlide key={index}>
                     <div className="position-relative">
-                      <Image src={slider.src} fixed width={200} height={200} alt={`Client ${index}`} />
+                      <Image src={slider.src} width={200} height={200} alt={`Client ${index}`} />
                     </div>
                   </SwiperSlide>
                 ))}

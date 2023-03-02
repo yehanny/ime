@@ -1,10 +1,13 @@
+import * as React from "react";
 import { Gallery } from "react-grid-gallery";
-import { useEffect, useState } from "react";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
+import { useState } from "react";
 import { Row, Col, Container, Card, CardBody } from "reactstrap";
 import { useTranslation } from "next-i18next";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Lightbox from "yet-another-react-lightbox";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import "yet-another-react-lightbox/plugins/captions.css";
+import "yet-another-react-lightbox/styles.css";
+import NextJsImage from "./NextJsImage";
 // import images;
 import advertising1 from "../../assets/images/portfolio/advertising/advertising1.jpg";
 import attractions1 from "../../assets/images/portfolio/attractions/attractions-1.jpg";
@@ -36,7 +39,7 @@ import hauntedhouses8 from "../../assets/images/portfolio/haunted-houses/haunted
 import pos1 from "../../assets/images/portfolio/pos/pos-1.jpg";
 import prototype1 from "../../assets/images/portfolio/prototypes/prototype1.jpg";
 
-const Portfolio = (props) => {
+const Portfolio = (image, offset, rect) => {
   const { t } = useTranslation("common");
 
   const [index, setIndex] = useState(-1);
@@ -59,13 +62,14 @@ const Portfolio = (props) => {
   // Image array
   const imgWidth = 320;
   const imgHeight = 320;
+
   const images = [
     {
       src: advertising1.src,
       mainSrc: advertising1.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${advertising} - Sharky`,
+      title: `${advertising} - Sharky`,
       tags: [{ value: advertising, title: advertising }],
       alt: `${advertising} - Sharky`,
     },
@@ -74,7 +78,7 @@ const Portfolio = (props) => {
       mainSrc: attractions1.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${attractions} - Lazer Runner`,
+      title: `${attractions} - Lazer Runner`,
       tags: [{ value: attractions, title: attractions }],
       alt: `${attractions} - Lazer Runner`,
     },
@@ -83,7 +87,7 @@ const Portfolio = (props) => {
       mainSrc: attractions2.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${attractions} - Cinema`,
+      title: `${attractions} - Cinema`,
       tags: [{ value: attractions, title: attractions }],
       alt: `${attractions} - Cinema`,
     },
@@ -92,7 +96,7 @@ const Portfolio = (props) => {
       mainSrc: attractions5.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${attractions} - Cinema`,
+      title: `${attractions} - Cinema`,
       tags: [{ value: attractions, title: attractions }],
       alt: `${attractions} - Cinema`,
     },
@@ -101,7 +105,7 @@ const Portfolio = (props) => {
       mainSrc: attractions6.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${attractions} - Cinema`,
+      title: `${attractions} - Cinema`,
       tags: [{ value: attractions, title: attractions }],
       alt: `${attractions} - Cinema`,
     },
@@ -110,7 +114,7 @@ const Portfolio = (props) => {
       mainSrc: attractions7.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${attractions} - Cinema`,
+      title: `${attractions} - Cinema`,
       tags: [{ value: attractions, title: attractions }],
       alt: `${attractions} - Cinema`,
     },
@@ -119,7 +123,7 @@ const Portfolio = (props) => {
       mainSrc: attractions3.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${attractions} - ${dinosaurs}`,
+      title: `${attractions} - ${dinosaurs}`,
       tags: [{ value: attractions, title: attractions }],
       alt: `${attractions} - ${dinosaurs}`,
     },
@@ -128,7 +132,7 @@ const Portfolio = (props) => {
       mainSrc: attractions4.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${attractions} - ${flintstones}`,
+      title: `${attractions} - ${flintstones}`,
       tags: [{ value: attractions, title: attractions }],
       alt: `${attractions} - ${dinosaurs}`,
     },
@@ -137,7 +141,7 @@ const Portfolio = (props) => {
       mainSrc: christmas1.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${christmas} - Chinita`,
+      title: `${christmas} - Chinita`,
       tags: [{ value: christmas, title: christmas }],
       alt: `${christmas} - Chinita`,
     },
@@ -146,7 +150,7 @@ const Portfolio = (props) => {
       mainSrc: christmas2.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${christmas} - ${christmas}`,
+      title: `${christmas} - ${christmas}`,
       tags: [{ value: christmas, title: christmas }],
       alt: `${christmas} - ${christmas}`,
     },
@@ -155,7 +159,7 @@ const Portfolio = (props) => {
       mainSrc: floats1.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${floats} - Christmas`,
+      title: `${floats} - Christmas`,
       tags: [{ value: floats, title: floats }],
       alt: `${floats} - Christmas`,
     },
@@ -164,7 +168,7 @@ const Portfolio = (props) => {
       mainSrc: floats2.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${floats} Mickey`,
+      title: `${floats} Mickey`,
       tags: [{ value: floats, title: floats }],
       alt: `${floats} Mickey`,
     },
@@ -173,7 +177,7 @@ const Portfolio = (props) => {
       mainSrc: floats3.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${floats} - Lego`,
+      title: `${floats} - Lego`,
       tags: [{ value: floats, title: floats }],
       alt: `${floats} - Lego`,
     },
@@ -182,7 +186,7 @@ const Portfolio = (props) => {
       mainSrc: floats4.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${floats} - ${pinnochio}`,
+      title: `${floats} - ${pinnochio}`,
       tags: [{ value: floats, title: floats }],
       alt: `${floats} - ${pinnochio}`,
     },
@@ -191,7 +195,7 @@ const Portfolio = (props) => {
       mainSrc: floats5.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${floats} - Maracaibo`,
+      title: `${floats} - Maracaibo`,
       tags: [{ value: floats, title: floats }],
       alt: `${floats} - Maracaibo`,
     },
@@ -200,7 +204,7 @@ const Portfolio = (props) => {
       mainSrc: floats6.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${floats} - ${circus}`,
+      title: `${floats} - ${circus}`,
       tags: [{ value: floats, title: floats }],
       alt: `${floats} - ${circus}`,
     },
@@ -209,7 +213,7 @@ const Portfolio = (props) => {
       mainSrc: floats7.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${floats} - ${flintstones}`,
+      title: `${floats} - ${flintstones}`,
       tags: [{ value: floats, title: floats }],
       alt: `${floats} - ${flintstones}`,
     },
@@ -218,7 +222,7 @@ const Portfolio = (props) => {
       mainSrc: floats8.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${floats} - Chinita`,
+      title: `${floats} - Chinita`,
       tags: [{ value: floats, title: floats }],
       alt: `${floats} - Chinita`,
     },
@@ -227,7 +231,7 @@ const Portfolio = (props) => {
       mainSrc: floats9.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${floats} - Cars`,
+      title: `${floats} - Cars`,
       tags: [{ value: floats, title: floats }],
       alt: `${floats} - Cars`,
     },
@@ -236,7 +240,7 @@ const Portfolio = (props) => {
       mainSrc: hauntedhouses1.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${haunted_house} - ${the_mummy}`,
+      title: `${haunted_house} - ${the_mummy}`,
       tags: [{ value: haunted_house, title: haunted_house }],
       alt: `${haunted_house} - ${the_mummy}`,
     },
@@ -245,7 +249,7 @@ const Portfolio = (props) => {
       mainSrc: hauntedhouses2.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${haunted_house} - ${the_mummy}`,
+      title: `${haunted_house} - ${the_mummy}`,
       tags: [{ value: haunted_house, title: haunted_house }],
       alt: `${haunted_house} - ${the_mummy}`,
     },
@@ -254,7 +258,7 @@ const Portfolio = (props) => {
       mainSrc: hauntedhouses3.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${haunted_house} - ${the_mummy}`,
+      title: `${haunted_house} - ${the_mummy}`,
       tags: [{ value: haunted_house, title: haunted_house }],
       alt: `${haunted_house} - ${the_mummy}`,
     },
@@ -263,7 +267,7 @@ const Portfolio = (props) => {
       mainSrc: hauntedhouses4.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${haunted_house} - ${the_elevator}`,
+      title: `${haunted_house} - ${the_elevator}`,
       tags: [{ value: haunted_house, title: haunted_house }],
       alt: `${haunted_house} - ${the_elevator}`,
     },
@@ -272,7 +276,7 @@ const Portfolio = (props) => {
       mainSrc: hauntedhouses5.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${haunted_house} - ${the_elevator}`,
+      title: `${haunted_house} - ${the_elevator}`,
       tags: [{ value: haunted_house, title: haunted_house }],
       alt: `${haunted_house} - ${the_elevator}`,
     },
@@ -281,7 +285,7 @@ const Portfolio = (props) => {
       mainSrc: hauntedhouses6.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${haunted_house} - ${the_elevator}`,
+      title: `${haunted_house} - ${the_elevator}`,
       tags: [{ value: haunted_house, title: haunted_house }],
       alt: `${haunted_house} - ${the_elevator}`,
     },
@@ -290,7 +294,7 @@ const Portfolio = (props) => {
       mainSrc: hauntedhouses7.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${haunted_house} - ${the_elevator}`,
+      title: `${haunted_house} - ${the_elevator}`,
       tags: [{ value: haunted_house, title: haunted_house }],
       alt: `${haunted_house} - ${the_elevator}`,
     },
@@ -299,7 +303,7 @@ const Portfolio = (props) => {
       mainSrc: hauntedhouses8.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${haunted_house} - Zombie`,
+      title: `${haunted_house} - Zombie`,
       tags: [{ value: haunted_house, title: haunted_house }],
       alt: `${haunted_house} - Zombie`,
     },
@@ -308,7 +312,7 @@ const Portfolio = (props) => {
       mainSrc: pos1.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${pos} - Cottom Candy`,
+      title: `${pos} - Cottom Candy`,
       tags: [{ value: pos, title: pos }],
       alt: `${pos} - Cottom Candy`,
     },
@@ -317,23 +321,18 @@ const Portfolio = (props) => {
       mainSrc: prototype1.mainSrc,
       width: imgWidth,
       height: imgHeight,
-      caption: `${prototypes} - Tierra Magica`,
+      title: `${prototypes} - Tierra Magica`,
       tags: [{ value: prototypes, title: prototypes }],
       alt: `${prototypes} - Tierra Magica`,
     },
   ];
 
   const currentImage = images[index];
-  const nextIndex = (index + 1) % images.length;
-  const nextImage = images[nextIndex] || currentImage;
-  const prevIndex = (index + images.length - 1) % images.length;
-  const prevImage = images[prevIndex] || currentImage;
   const handleClick = (index) => {
     setIndex(index);
   };
+  const handleOpen = () => index >= 0 && setIndex(index);
   const handleClose = () => setIndex(-1);
-  const handleMovePrev = () => setIndex(prevIndex);
-  const handleMoveNext = () => setIndex(nextIndex);
 
   return (
     <>
@@ -344,7 +343,7 @@ const Portfolio = (props) => {
               <h2 className="title">{title}</h2>
               <h6 className="subtitle">{subtitle}</h6>
               <Gallery images={images} enableImageSelection={false} onClick={handleClick} maxRows={5} />
-              {!!currentImage && <Lightbox mainSrc={currentImage} imageTitle={currentImage.alt} mainSrcThumbnail={currentImage.src} nextSrc={nextImage.src} nextSrcThumbnail={nextImage.src} prevSrc={prevImage.src} prevSrcThumbnail={prevImage.src} onCloseRequest={handleClose} onMovePrevRequest={handleMovePrev} onMoveNextRequest={handleMoveNext} />}
+              {!!currentImage && <Lightbox open={handleOpen} index={index} close={handleClose} slides={images} render={{ slide: NextJsImage }} plugins={[Captions]} />}
             </Col>
           </Row>
         </Container>

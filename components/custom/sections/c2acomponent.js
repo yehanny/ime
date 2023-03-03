@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from "react";
 import { Row, Col, Container } from "reactstrap";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import img1 from "../../../assets/images/features/feature48/app-store.png";
 import img2 from "../../../assets/images/features/feature48/play-store.png";
 

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function NextJsImage(image, offset, rect) {
   const width = Math.round(Math.min(rect.width, (rect.height / image.height) * image.width));

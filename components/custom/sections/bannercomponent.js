@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from "react";
 import { Row, Col, Container } from "reactstrap";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import herobanner from "../../../assets/images/staticslider/slider/hero-banner.jpg";
 const BannerComponent = () => {
   return (

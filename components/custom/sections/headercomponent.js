@@ -16,10 +16,10 @@ import {
   NavbarToggler,
   Collapse,
 } from "reactstrap";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import logo from "../../../assets/images/logos/green-logo.png";
 import logo2 from "../../../assets/images/logos/white-logo.png";
-import image from "next/image";
+import image from "next/legacy/image";
 
 const HeaderComponent = () => {
   const [isOpen, setIsOpen] = useState(false);

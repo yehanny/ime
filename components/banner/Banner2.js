@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Container, Row, Col } from "reactstrap";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import bannerimg from "../../assets/images/landingpage/banner-img.png";
 
 const Banner2 = () => {

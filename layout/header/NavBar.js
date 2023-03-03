@@ -1,12 +1,12 @@
 /* eslint-disable */
 import React, { useState } from "react";
 import { Row, Col, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem, Container, NavbarBrand, Navbar, Nav, NavItem, NavbarToggler, Collapse, NavLink } from "reactstrap";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import logo from "../../assets/images/logos/ime-logo.webp";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import logo2 from "../../assets/images/logos/white-logo.png";
-import image from "next/image";
+import image from "next/legacy/image";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);

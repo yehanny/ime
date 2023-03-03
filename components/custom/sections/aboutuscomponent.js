@@ -3,7 +3,7 @@ import React from "react";
 import { Row, Col, Container } from "reactstrap";
 import { useTranslation } from "next-i18next";
 import TopHeaderSections from "./topheadersections";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import office1 from "../../../assets/images/office/office-1.jpg";
 import office2 from "../../../assets/images/office/office-2.jpg";
 import office3 from "../../../assets/images/office/office-3.jpg";
@@ -17,7 +17,7 @@ const AboutUs = () => {
         <Container>
           <Row className="justify-content-center">
             <Col md="4">
-              <Image width={400} src={office1} alt="Who we are" />
+              <Image src={office1} alt="Who we are" />
             </Col>
             <Col md="8" className="text-justify">
               <h2 className="title">{t("about-us.who-we-are.title")}</h2>
@@ -32,12 +32,12 @@ const AboutUs = () => {
               <p>{t("about-us.mission.description")}</p>
             </Col>
             <Col md="4">
-              <Image width={400} src={office2} alt="Mission" />
+              <Image src={office2} alt="Mission" />
             </Col>
           </Row>
           <Row>
             <Col md="4">
-              <Image width={400} src={office3} alt="Vision" />
+              <Image src={office3} alt="Vision" />
             </Col>
             <Col md="8">
               <h2 className="title">{t("about-us.vision.title")}</h2>

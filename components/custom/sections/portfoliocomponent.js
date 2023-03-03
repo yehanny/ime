@@ -2,7 +2,7 @@
 import React from "react";
 import { Row, Col, Container, Card, CardBody } from "reactstrap";
 import { useTranslation } from "next-i18next";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import img1 from "../../../assets/images/portfolio/img1.jpg";
 import img2 from "../../../assets/images/portfolio/img2.jpg";
 import img3 from "../../../assets/images/portfolio/img3.jpg";

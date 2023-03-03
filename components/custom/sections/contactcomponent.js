@@ -3,6 +3,7 @@ import { Row, Col, Container, Form, FormGroup, Input, Button } from "reactstrap"
 import { useTranslation } from "next-i18next";
 import office1 from "../../../assets/images/office/office-1.jpg";
 import Image from "next/image";
+import ContactForm from "../../ContactForm";
 
 const ContactComponent = () => {
   const { t } = useTranslation("common");
@@ -25,33 +26,7 @@ const ContactComponent = () => {
               <Col lg="8">
                 <div className="contact-box p-r-40">
                   <h4 className="title">{t("contact-us.quick-contact")}</h4>
-                  <Form>
-                    <Row>
-                      <Col lg="6">
-                        <FormGroup className="m-t-15">
-                          <Input type="text" name="name" placeholder={t("contact-us.form.name")} />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="6">
-                        <FormGroup className="m-t-15">
-                          <Input type="text" name="email" placeholder={t("contact-us.form.email")} />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="12">
-                        <FormGroup className="m-t-15">
-                          <Input type="textarea" name="message" placeholder={t("contact-us.form.message")} />
-                        </FormGroup>
-                      </Col>
-                      <Col lg="12">
-                        <Button type="submit" className="btn btn-danger-gradiant m-t-20 btn-arrow">
-                          <span>
-                            {" "}
-                            {t("contact-us.form.send")} <i className="ti-arrow-right"></i>
-                          </span>
-                        </Button>
-                      </Col>
-                    </Row>
-                  </Form>
+                  <ContactForm />
                 </div>
               </Col>
               <Col lg="4">

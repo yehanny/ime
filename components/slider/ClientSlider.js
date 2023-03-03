@@ -18,8 +18,6 @@ const ClientSlider = () => {
   const title = t("clients.title");
   const subtitle = t("clients.subtitle");
 
-  console.info("clients: ", clientimages);
-
   return (
     <>
       <div className="spacer">

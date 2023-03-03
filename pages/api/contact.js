@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-export default function (req, res) {
+export default function handler(req, res) {
   const message = {
     from: req.body.email,
     to: process.env.SMTP2GO_EMAIL,

@@ -1,7 +1,5 @@
 import nodemailer from "nodemailer";
 
-// const nodemailer = require("nodemailer");
-
 export default function (req, res) {
   const message = {
     from: req.body.email,

@@ -8,7 +8,6 @@ const ContactForm = () => {
   const { t } = useTranslation("common");
   const { values, handleChange } = useContactForm();
   const [responseMessage, setResponseMessage] = useState({ isSuccessful: false, message: "" });
-  console.info("responseMessage: ", responseMessage);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

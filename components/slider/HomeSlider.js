@@ -65,7 +65,7 @@ const HomeSlider = () => {
       autoplay={true}>
       {sliders.map((slider) => (
         <SwiperSlide key={slider.id}>
-          <Image src={slider.image} layout="responsive" alt={`Slider ${slider.id}`} />
+          <Image src={slider.image} alt={`Slider ${slider.id}`} />
         </SwiperSlide>
       ))}
     </Swiper>

@@ -7,7 +7,7 @@ export default function NextJsImage(image, offset, rect) {
 
   return (
     <div style={{ position: "relative", width, height }}>
-      <Image layout="fill" alt="" src={image} loading="eager" draggable={false} sizes={typeof window !== "undefined" ? `${Math.ceil((width / window.innerWidth) * 100)}vw` : `${width}px`} />
+      <Image fill alt="" src={image} loading="eager" draggable={false} sizes={typeof window !== "undefined" ? `${Math.ceil((width / window.innerWidth) * 100)}vw` : `${width}px`} />
     </div>
   );
 }

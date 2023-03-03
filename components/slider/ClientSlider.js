@@ -2,7 +2,7 @@
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCreative } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Row, Col, Container } from "reactstrap";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useTranslation } from "next-i18next";
 import clientimages from "./clientimages";
 

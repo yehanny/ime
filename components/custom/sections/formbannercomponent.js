@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Container, Form } from "reactstrap";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import banner from "../../../assets/images/form-banners/banner1/banner-img.png";
 
 const FormBannerComponent = () => {

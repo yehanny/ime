@@ -1,7 +1,7 @@
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCreative } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import slider1 from "../../assets/images/home-slider/slider-1.jpg";
 import slider2 from "../../assets/images/home-slider/slider-2.jpg";
 import slider3 from "../../assets/images/home-slider/slider-3.jpg";
@@ -65,7 +65,7 @@ const HomeSlider = () => {
       autoplay={true}>
       {sliders.map((slider) => (
         <SwiperSlide key={slider.id}>
-          <Image src={slider.image} layout="responsive" alt={`Slider ${slider.id}`} />
+          <Image src={slider.image} alt={`Slider ${slider.id}`} />
         </SwiperSlide>
       ))}
     </Swiper>

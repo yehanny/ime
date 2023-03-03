@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from "react";
 import { Row, Col, Container, Card, CardBody } from "reactstrap";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import img1 from "../../../assets/images/features/feature13/img1.jpg";
 import img2 from "../../../assets/images/features/feature13/img2.jpg";
 import img3 from "../../../assets/images/features/feature13/img3.jpg";

@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Container, Form, FormGroup, Input, Button } from "reactstrap";
 import { useTranslation } from "next-i18next";
 import office1 from "../../../assets/images/office/office-1.jpg";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import ContactForm from "../../ContactForm";
 
 const ContactComponent = () => {
@@ -31,7 +31,7 @@ const ContactComponent = () => {
               </Col>
               <Col lg="4">
                 <div className="detail-box p-40 bg-info">
-                  <Image width={340} src={office1} alt="Contact Us" />
+                  <Image src={office1} alt="Contact Us" />
                 </div>
               </Col>
             </Row>

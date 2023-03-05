@@ -5,6 +5,7 @@ const useContactForm = () => {
     email: "",
     fullname: "",
     message: "",
+    email_from: "",
   });
 
   const handleChange = (e) => {
@@ -16,7 +17,7 @@ const useContactForm = () => {
     });
   };
 
-  return { values, handleChange };
+  return { values, setValues, handleChange };
 };
 
 export default useContactForm;

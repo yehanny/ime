@@ -18,13 +18,14 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setValues({
-      email: "",
+      email_to: "",
+      email_from: "",
       fullname: "",
       message: "",
     });
     setDisableSubmit(true);
     try {
-      const req = await sendMail(values.email, values.fullname, values.message, values.email_from);
+      const req = await sendMail(values.email_to, values.email_from, values.fullname, values.message);
       if (req.status === 200) {
         notifySuccess();
         setDisableSubmit(false);
@@ -38,7 +39,7 @@ const ContactForm = () => {
   return (
     <Form onSubmit={handleSubmit}>
       <ToastContainer />
-      <Input type="hidden" value="info@industrialmagicentertainment.com" id="email_from" name="email_from" />
+      <Input type="hidden" value="info@industrialmagicentertainment.com" id="email_to" name="email_to" />
       <Row>
         <Col lg="6">
           <FormGroup className="m-t-15">
@@ -47,7 +48,7 @@ const ContactForm = () => {
         </Col>
         <Col lg="6">
           <FormGroup className="m-t-15">
-            <Input required type="email" value={values.email} id="email" name="email" onChange={handleChange} placeholder={t("contact-us.form.email")} />
+            <Input required type="email" value={values.email_from} id="email_from" name="email_from" onChange={handleChange} placeholder={t("contact-us.form.email")} />
           </FormGroup>
         </Col>
         <Col lg="12">

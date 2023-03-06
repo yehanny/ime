@@ -2,10 +2,10 @@ import { useState } from "react";
 
 const useContactForm = () => {
   const [values, setValues] = useState({
-    email: "",
+    email_to: "",
+    email_from: "",
     fullname: "",
     message: "",
-    email_from: "",
   });
 
   const handleChange = (e) => {
